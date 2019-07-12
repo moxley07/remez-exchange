@@ -34,7 +34,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
-#include <R.h>
 
 #define CONST const
 #define BANDPASS       1
@@ -696,7 +695,7 @@ void remez(double h[], int *numtaps,
       CalcParms(r, Ext, Grid, D, W, ad, x, y);
       CalcError(r, ad, x, y, gridsize, Grid, D, W, E);
       int err = Search(r, Ext, gridsize, E);
-      if (err) error("error, %i, %i", err, gridsize);
+      // if (err) error("error, %i, %i", err, gridsize);
       //      for(i=0; i <= r; i++) assert(Ext[i]<gridsize);
       if (isDone(r, Ext, E))
          break;
